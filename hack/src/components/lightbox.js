@@ -4,6 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { Bar } from 'react-chartjs-2';
 
+
 import Pic1 from '../assets/Images/video-list-0.jpg';
 import Pic2 from '../assets/Images/video-list-1.jpg';
 import Pic3 from '../assets/Images/video-list-2.jpg';
@@ -29,32 +30,18 @@ export default class lightbox extends Component {
 		};
 
 		return (
-			<Carousel>
+			<Carousel className="carousel-wrapper">
 				<div>
-					<h2>Bar Example (custom size)</h2>
-					<Bar
-						data={data}
-						width={100}
-						height={50}
-						options={{
-							maintainAspectRatio: false
-						}}
-					/>
+					<img src={Pic1} />
+					<p className="legend">Legend 1</p>
 				</div>
 				<div>
-					<h2>Bar Example (custom size)</h2>
-					<Bar
-						data={data}
-						width={100}
-						height={50}
-						options={{
-							maintainAspectRatio: false
-						}}
-					/>
+					<img src={Pic2} />
+					<p className="legend">Legend 2</p>
 				</div>
 				<div>
 					<img src={Pic6} />
-					<p className="legend">Legend 6</p>
+					<p className="legend">Legend 3</p>
 				</div>
 			</Carousel>
 		);
