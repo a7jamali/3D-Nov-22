@@ -13,48 +13,27 @@ import Pic6 from '../assets/Images/video-list-5.jpg';
 
 export default class lightbox extends Component {
 	render() {
-		const data = {
-			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July' ],
-			datasets: [
-				{
-					label: 'My First dataset',
-					backgroundColor: 'rgba(255,99,132,0.2)',
-					borderColor: 'rgba(255,99,132,1)',
-					borderWidth: 1,
-					hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-					hoverBorderColor: 'rgba(255,99,132,1)',
-					data: [ 65, 59, 80, 81, 56, 55, 40 ]
-				}
-			]
-		};
-
 		return (
-			<Carousel>
+			<Carousel className="carouselte">
 				<div>
-					<h2>Bar Example (custom size)</h2>
-					<Bar
-						data={data}
-						width={100}
-						height={50}
-						options={{
-							maintainAspectRatio: false
-						}}
-					/>
+					<img src={Pic1} />
+					<p className="legend">Legend 1</p>
 				</div>
 				<div>
-					<h2>Bar Example (custom size)</h2>
-					<Bar
-						data={data}
-						width={100}
-						height={50}
-						options={{
-							maintainAspectRatio: false
-						}}
-					/>
+					<img src={Pic2} />
+					<p className="legend">Legend 2</p>
 				</div>
 				<div>
-					<img src={Pic6} />
-					<p className="legend">Legend 6</p>
+					<img src={Pic3} />
+					<p className="legend">Legend 3</p>
+				</div>
+				<div>
+					<img src={Pic4} />
+					<p className="legend">Legend 3</p>
+				</div>
+				<div>
+					<img src={Pic5} />
+					<p className="legend">Legend 3</p>
 				</div>
 			</Carousel>
 		);

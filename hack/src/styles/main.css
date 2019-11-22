@@ -1,1 +1,52 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+li {
+  background-color: white;
+}
+
+.slide {
+  background-color: white;
+}
+
+.slide li {
+  background-color: white;
+}
+
+.selected {
+  background-color: white;
+}
+
+.selected li {
+  background-color: white;
+}
+
+.carousel .slide {
+  background-color: white;
+  height: 400px;
+}
+
+.carousel .slide li {
+  background-color: white;
+}
+
+.carouselte {
+  border-bottom: 1px solid red;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+}
+
+.slide {
+  border-top: 1px solid red;
+}
+
+.thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html,
+body {
+  padding: 2% 10%;
+}
+/*# sourceMappingURL=main.css.map */
