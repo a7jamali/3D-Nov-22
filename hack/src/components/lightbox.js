@@ -1,69 +1,62 @@
 import React, { Component } from 'react';
-import Lightbox from 'react-image-lightbox';
-import { Link } from 'react-router-dom';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+// import { Link } from 'react-router-dom';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
+import { Bar } from 'react-chartjs-2';
 
-const images = [
-	'//placekitten.com/1500/500',
-	'//placekitten.com/4000/3000',
-	'//placekitten.com/800/1200',
-	'//placekitten.com/1500/1500'
-];
+import Pic1 from '../assets/Images/video-list-0.jpg';
+import Pic2 from '../assets/Images/video-list-1.jpg';
+import Pic3 from '../assets/Images/video-list-2.jpg';
+import Pic4 from '../assets/Images/video-list-3.jpg';
+import Pic5 from '../assets/Images/video-list-4.jpg';
+import Pic6 from '../assets/Images/video-list-5.jpg';
 
-export default class LightboxExample extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			photoIndex: 0,
-			isOpen: false
-		};
-	}
-
-	submitButton = () => {
-		return (
-			<div>
-				<button type="button">Submit</button>
-			</div>
-		);
-	};
-
+export default class lightbox extends Component {
 	render() {
-		const { photoIndex, isOpen } = this.state;
-		const toolBar = [
-			<Link to="/category">
-				{' '}
-				<button type="button">submit</button>{' '}
-			</Link>
-		];
-		const title = [ 'title', 'whatever' ];
+		const data = {
+			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July' ],
+			datasets: [
+				{
+					label: 'My First dataset',
+					backgroundColor: 'rgba(255,99,132,0.2)',
+					borderColor: 'rgba(255,99,132,1)',
+					borderWidth: 1,
+					hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+					hoverBorderColor: 'rgba(255,99,132,1)',
+					data: [ 65, 59, 80, 81, 56, 55, 40 ]
+				}
+			]
+		};
 
 		return (
-			<div>
-				<button type="button" onClick={() => this.setState({ isOpen: true })}>
-					Open Lightbox
-				</button>
-
-				{isOpen && (
-					<Lightbox
-						mainSrc={images[photoIndex]}
-						nextSrc={images[(photoIndex + 1) % images.length]}
-						prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-						onCloseRequest={() => this.setState({ isOpen: false })}
-						onMovePrevRequest={() =>
-							this.setState({
-								photoIndex: (photoIndex + images.length - 1) % images.length
-							})}
-						onMoveNextRequest={() =>
-							this.setState({
-								photoIndex: (photoIndex + 1) % images.length
-							})}
-						onAfterOpen={this.submitButton}
-						toolbarButtons={toolBar}
-						imageCaption={title[this.state.photoIndex]}
+			<Carousel>
+				<div>
+					<h2>Bar Example (custom size)</h2>
+					<Bar
+						data={data}
+						width={100}
+						height={50}
+						options={{
+							maintainAspectRatio: false
+						}}
 					/>
-				)}
-			</div>
+				</div>
+				<div>
+					<h2>Bar Example (custom size)</h2>
+					<Bar
+						data={data}
+						width={100}
+						height={50}
+						options={{
+							maintainAspectRatio: false
+						}}
+					/>
+				</div>
+				<div>
+					<img src={Pic6} />
+					<p className="legend">Legend 6</p>
+				</div>
+			</Carousel>
 		);
 	}
 }
