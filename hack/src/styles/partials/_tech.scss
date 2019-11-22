@@ -1,0 +1,94 @@
+.tech {
+
+    display: flex;
+    flex-flow: column;
+
+    &__header {
+        padding-top: 36px;
+        padding-left: 5vw;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        height: 227px;
+
+        &-logo {
+            background: silver;
+            width: 266px;
+            height: 98px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-page {
+            font-size: 2rem;
+            font-family: AvenirDemi;
+        }
+    }
+
+
+
+    &__sort {
+    
+        &-div {
+        width: 260px;
+        height: 60px;
+        display: flex;
+        margin-right: 5vw;
+        align-self: flex-end;
+        margin-bottom: 60px;
+        }
+
+        &-text {
+            width: 200px;
+            background: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &-button {
+            width: 60px;
+            border: none;
+            color: white;
+            background: silver;
+        }
+    }
+
+    &__list {
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-flow: row;
+        width: 90vw;
+        margin-bottom: 32px
+
+    }
+
+    &__vid {
+        height: 213px;
+        width: 397px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+    }
+
+    &__textbox {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 60.9vw;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: silver;
+        padding-left: 34px;
+        padding-right: 30px;
+    }
+}
