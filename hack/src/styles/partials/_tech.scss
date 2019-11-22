@@ -37,11 +37,14 @@
         margin-right: 5vw;
         align-self: flex-end;
         margin-bottom: 60px;
+        box-shadow: 2px 2px 5px 1px rgba(192, 192, 192, 0.22);
+        border-radius: 30px;
+        border: 1px solid rgba(192, 192, 192, 0.22);
         }
 
         &-text {
             width: 200px;
-            background: gray;
+            background: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,8 +54,15 @@
         &-button {
             width: 60px;
             border: none;
-            color: white;
-            background: silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &-icon {
+            width: 19.5px;
+            height: 14px;
         }
     }
 
@@ -81,14 +91,26 @@
 
     &__textbox {
         display: flex;
-        flex-flow: row;
-        align-items: center;
+        flex-flow: column;
         justify-content: space-between;
         width: 60.9vw;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        background: silver;
         padding-left: 34px;
         padding-right: 30px;
+        padding-top: 15px;
+        padding-bottom: 67px;
+        box-shadow: 10px 10px 15px -1px rgba(238, 237, 237, 0.42);
+        &-array {
+            display: flex;
+            flex-flow: row;
+
+            &-cell {
+                margin-right: 62px;
+                color: #9c9c9c;
+            }
+        }
     }
+
+
 }

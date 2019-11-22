@@ -54,11 +54,15 @@
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 60px;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(192, 192, 192, 0.22);
+          box-shadow: 2px 2px 5px 1px rgba(192, 192, 192, 0.22);
+  border-radius: 30px;
+  border: 1px solid rgba(192, 192, 192, 0.22);
 }
 
 .tech__sort-text {
   width: 200px;
-  background: gray;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,8 +77,20 @@
 .tech__sort-button {
   width: 60px;
   border: none;
-  color: white;
-  background: silver;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tech__sort-icon {
+  width: 19.5px;
+  height: 14px;
 }
 
 .tech__list {
@@ -114,22 +130,37 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 60.9vw;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background: silver;
   padding-left: 34px;
   padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 67px;
+  -webkit-box-shadow: 10px 10px 15px -1px rgba(238, 237, 237, 0.42);
+          box-shadow: 10px 10px 15px -1px rgba(238, 237, 237, 0.42);
+}
+
+.tech__textbox-array {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.tech__textbox-array-cell {
+  margin-right: 62px;
+  color: #9c9c9c;
 }
 
 @font-face {
