@@ -1,4 +1,9 @@
-.slide {
-	height: 400px;
-	width: 400px;
+.thumbs {
+	display: flex;
+	justify-content: space-around;
+}
+
+.carouselte {
+	margin: 10% 15%;
+	border: 1px solid grey;
 }
