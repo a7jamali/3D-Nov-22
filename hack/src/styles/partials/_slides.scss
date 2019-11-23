@@ -1,47 +1,9 @@
-li {
-	background-color: white;
-}
-.slide {
-	background-color: white;
-	& li {
-		background-color: white;
-	}
-}
-.selected {
-	background-color: white;
-	& li {
-		background-color: white;
-	}
-}
-.carousel .slide {
-	background-color: white;
-	height: 400px;
-	& li {
-		background-color: white;
-	}
-}
-.carouselte {
-	border-bottom: 1px solid red;
-	border-left: 1px solid red;
-	border-right: 1px solid red;
-}
-.slide {
-	border-top: 1px solid red;
-}
-
 .thumbs {
 	display: flex;
 	justify-content: space-around;
 }
-// .carousel .thumb {
-// 	height: 163px;
-// 	width: 163px;
-// }
-// .legend {
-// 	width: 100px;
-// }
-// .carousel .slide .legend {
-// 	& p {
-// 		width: 100px;
-// 	}
-// }
+
+.carouselte {
+	margin: 10% 15%;
+	border: 1px solid grey;
+}
